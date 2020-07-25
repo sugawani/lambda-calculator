@@ -20,4 +20,4 @@ jobs:
       env: 
         S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
       run: |
-          aws s3 cp ./Web/ s3://$S3_UPLOAD_BUCKET/ --recursive --include "*"
+          aws s3 cp Web s3://$S3_UPLOAD_BUCKET/ --recursive --exclude "*" --include "*"
